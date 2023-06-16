@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+}
+
+.container-lateral {
+    display: flex;
+    flex-direction: column;
+    background-color: #0c0c14;
+    width: 350px;
+    height: 100vh;
+    transition: 0.6s;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+
+
+}
+
+.hamburguer {
+    cursor: pointer;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.hamburguer.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburguer.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburguer.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburguer.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.container-lateral.active {
+    width: 80px;
+
+}
+
+.foto-da-marca {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-foto-da-marca {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    overflow: hidden;
+}
+
+.logo-marca {
+    width: 200px;
+}
+
+.nome-da-marca {
+    font-size: 20px;
+    color: #fff;
+
+}
+
+.nome-da-marca.active {
+    display: none;
+}
+
+.logo-marca.active {
+    width: 70px;
+}
+
+
+
+.texto-link {
+    display: flex;
+    align-items: center;
+    width: 30%;
+}
+
+.texto-link.active {
+    display: none;
+}
+
+
+.bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 2px;
+    margin-left: 80%;
+    margin-bottom: 5px;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.lista-menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+    padding: 10px;
+}
+
+li:hover {
+    background-color: #2fbf71;
+}
+
+.icones {
+    font-size: 30px;
+    color: #fff;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.area-cliente {
+    display: flex;
+    flex-direction: column;
+    height: 390px;
+    color: #fff
+}
+
+.titulo-sua-conta {
+    padding: 15px;
+}
+
+.titulo-sua-conta.active {
+    display: none;
+}
+
+.texto-link {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+@media (max-width: 768px) {
+    .container-lateral {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        overflow: hidden;
+    }
+
+    .bar {
+        margin-left: 90%
+    }
+
+    .container-lateral.active {
+        width: 80%;
+        height: 100%;
+    }
+
+    .texto-link.active {
+        display: block;
+        display: flex;
+        align-items: center;
+    }
+
+    .container-foto-da-marca {
+
+        width: 15%;
+    }
+
+    .nome-da-marca.active {
+        display: block;
+    }
+}
