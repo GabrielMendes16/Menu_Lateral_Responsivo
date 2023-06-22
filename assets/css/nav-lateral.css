@@ -194,3 +194,10 @@ li:hover {
         display: block;
     }
 }
+
+@media (min-width: 1366px) {
+    .lista-menu{
+        margin-top: -20px;
+    }
+    
+  }
